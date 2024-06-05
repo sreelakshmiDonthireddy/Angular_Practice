@@ -1,0 +1,6 @@
+<p>observable works!</p>
+<button type="button"(click)="isNext()">Next</button>
+<p>Numbers:</p>
+<ul>
+  <li *ngFor="let number of numbers$ | async">{{ number }}</li>
+</ul>

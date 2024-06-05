@@ -1,0 +1,18 @@
+<h2>Binding Example</h2>
+
+Interpolation
+<p>{{ greeting }}</p>
+
+<!-- Property Binding -->
+<input [value]="name || ''" (input)="onInputChange($event)" placeholder="Enter your name">
+<p>Hello, {{ name }}</p>
+
+<!-- Event Binding -->
+<button (click)="increment()">Increment Counter</button>
+<p>Counter: {{ counter }}</p>
+
+<!-- Two-way Binding -->
+<input [(ngModel)]="message" placeholder="Enter a message">
+<p>You typed: {{ message }}</p>
+
+<button type="button"(click)="isNext()">Next</button>

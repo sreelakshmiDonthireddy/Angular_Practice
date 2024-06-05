@@ -1,0 +1,6 @@
+<p>parent works!</p>
+<button (click)="toggleChild()">Toggle child</button>
+<app-child *ngIf="isChild">
+  <h2 #projectedContent>Angular practice</h2>
+</app-child>
+<button type="button"(click)="isNext()">Next</button>
