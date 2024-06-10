@@ -1,6 +1,12 @@
 <p>child works!</p>
-<ng-content></ng-content>
-<input type="text" [(ngModel)]="channelName">
+<!-- <ng-content></ng-content>
+<input class="input-text" type="text" [(ngModel)]="channelName">
 <div>
   <h3>{{channelName}}</h3>
-</div>
+</div> -->
+
+  <!-- it is related to Standalone Component -->
+  <p>Standalone Component</p>
+<section (click)="onClick()">
+  <h3 appHighlight>This is Child Component!</h3>
+</section>

@@ -1,0 +1,10 @@
+.btn-next{
+    background-color: #040483;
+    color: rgb(255, 255, 255);
+    border:none;
+    border-radius: 4px;
+}
+.btn-toggle{
+    border:none;
+    border-radius: 4px;
+}

@@ -1,6 +1,10 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ContentChild, DoCheck, OnChanges, OnDestroy, OnInit } from '@angular/core';
+import { AlertService } from 'src/app/shared/alert.service';
+import { SharedModule } from 'src/app/shared/shared/shared.module';
 
 @Component({
+  standalone:true,
+  imports:[SharedModule],
   selector: 'app-child',
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css']
@@ -18,9 +22,9 @@ AfterViewChecked
 {
   counter=0;
   interval:any;
-  channelName="";
+  channelName:any;
   @ContentChild('projectedContent') projectedContent:any;
-  constructor(){
+  constructor(private alertService:AlertService){
     console.log("child constructor is called")
   }
   ngOnInit():void{
@@ -58,5 +62,9 @@ AfterViewChecked
   ngAfterViewChecked(){
     console.log("in After view checked")
 
+  }
+  //standalone
+  onClick(){
+this.alertService.alertClick();
   }
 }

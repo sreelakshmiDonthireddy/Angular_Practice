@@ -1,6 +1,15 @@
-
-<h3>Pipe</h3>
-<p>Current Date: {{ currentDate | date }}</p>
-<p>{{ message | uppercase }}</p>
-<p>Temperature: {{ temperature | temperature }}</p>
-<button type="button"(click)="isNext()">Next</button>
+<div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="text-center">
+        <h3>Pipe</h3>
+        <p>Current Date: {{ currentDate | date }}</p>
+        <p>{{ message | uppercase }}</p>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <!-- <div class="col-auto px-2">
+      <button type="button" class="btn-next">Prev</button>
+    </div> -->
+    <div class="col-auto px-2">
+      <button type="button" class="btn-next" (click)="isNext()">Next</button>
+    </div>
+  </div>

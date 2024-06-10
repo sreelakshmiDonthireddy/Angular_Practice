@@ -3,10 +3,10 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class DataService {
+export class AlertService {
 
   constructor() { }
-  getData(): string {
-    return 'Data Service';
+  alertClick(){
+    alert("clicked!")
   }
 }

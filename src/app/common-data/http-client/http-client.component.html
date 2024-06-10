@@ -1,1 +1,27 @@
-<p>http-client works!</p>
+<p>Get Api!</p>
+
+<div class="table-container">
+  <table>
+
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+    </tr>
+    <tbody>
+      <tr *ngFor="let data of demoData">
+        <td>{{data.userId}}</td>
+        <td>{{data.title}}</td>
+        <td>{{data.id}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h5>Post API</h5>
+<div class="col-md-6">
+  <div class="m-2"><input type="text" class="form-control" [(ngModel)]="title" placeholder="title"></div>
+  <div class="m-2"><input type="text" class="form-control" [(ngModel)]="ids" placeholder="id"></div>
+  <div class="m-2"><input type="text" class="form-control" [(ngModel)]="name" placeholder="name"></div>
+</div>
+<div style="margin-left: 10px;"><button type="text" class="btn-submit" (click)="createPost()">submit</button></div>

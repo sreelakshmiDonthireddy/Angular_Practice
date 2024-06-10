@@ -1,14 +1,25 @@
-<form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
-  <div>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" ngModel required>
+<div class="container d-flex justify-content-center align-items-center mt-5">
+  <div class="text-center form-container">
+    <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" ngModel required class="form-control">
+        <div *ngIf="form.submitted && form.controls['name']?.invalid" class="text-danger">
+          Name is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" ngModel required email class="form-control">
+        <div *ngIf="form.submitted && form.controls['email']?.invalid" class="text-danger">
+          Valid email is required.
+        </div>
+      </div>
+      <button type="submit" [disabled]="!form.valid" class="btn-submit mt-3">Submit</button>
+    </form>
   </div>
-  <div>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" ngModel required email>
-  </div>
-  <button type="submit" [disabled]="!form.valid">Submit</button>
-</form>
+</div>
+
 
 <div *ngIf="submitted">
   <p>Name: {{ formData.name }}</p>

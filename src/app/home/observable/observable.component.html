@@ -1,6 +1,12 @@
-<p>observable works!</p>
-<button type="button"(click)="isNext()">Next</button>
-<p>Numbers:</p>
-<ul>
-  <li *ngFor="let number of numbers$ | async">{{ number }}</li>
-</ul>
+<div class="d-flex justify-content-center mt-5">
+  <button type="button" class="btn-next" (click)="isNext()">Next</button>
+</div>
+<div class="container d-flex justify-content-center align-items-center mt-5">
+  <div class="text-center">
+    <p>observable Component</p>
+    <p>Numbers:</p>
+    <ul>
+      <li *ngFor="let number of numbers$ | async">{{ number }}</li>
+    </ul>
+  </div>
+</div>

@@ -1,14 +1,23 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
+interface User {
+  userId: number;
+  title: string;
+  id:string;
+}
 @Component({
   selector: 'app-http-client',
   templateUrl: './http-client.component.html',
   styleUrls: ['./http-client.component.css']
 })
-export class HttpClientComponent {
-  constructor(private http: HttpClient) { }
 
+export class HttpClientComponent {
+  constructor(private http: HttpClient, private router:Router) { }
+  demoData : User[]= [];
+  name:any;
+  title:any;
+  ids:any;
   ngOnInit(): void {
     this.fetchData();
     this.createPost();
@@ -17,19 +26,20 @@ export class HttpClientComponent {
   fetchData() {
     this.http.get('https://jsonplaceholder.typicode.com/posts').subscribe((data: any) => {
       console.log('Fetched Data:', data);
-      // Here you can handle the fetched data
+      this.demoData = data;
+      console.log(this.demoData[0].userId)
     });
   }
   createPost() {
     const newPost = {
-      title: 'New Post',
-      body: 'This is a new post.',
-      userId: 1
+      title: this.title,
+      body: this.name,
+      userId: this.ids
     };
 
     this.http.post('https://jsonplaceholder.typicode.com/posts', newPost).subscribe((data: any) => {
       console.log('Created Post:', data);
-      // Here you can handle the response of creating a post
+      this.router.navigateByUrl('signal')
     });
   }
 }

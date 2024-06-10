@@ -1,18 +1,22 @@
-<h2>Binding Example</h2>
+<div class="container d-flex justify-content-center align-items-center mt-5">
+  <div class="text-center">
+    <h2>Binding Example</h2>
+<div>
+    <!-- Property Binding -->
+    <input [value]="name || ''" (input)="onInputChange($event)" placeholder="Enter your name" style="border-radius: 4px;">
+    <p>Hello, {{ name }}</p>
 
-Interpolation
-<p>{{ greeting }}</p>
+    <!-- Event Binding -->
+    <button (click)="increment()" style="border-radius: 4px; margin-right: 20px;">+</button>
+    <button (click)="decrement()" style="border-radius: 4px;">-</button>
+    <p>Counter: {{ counter }}</p>
 
-<!-- Property Binding -->
-<input [value]="name || ''" (input)="onInputChange($event)" placeholder="Enter your name">
-<p>Hello, {{ name }}</p>
-
-<!-- Event Binding -->
-<button (click)="increment()">Increment Counter</button>
-<p>Counter: {{ counter }}</p>
-
-<!-- Two-way Binding -->
-<input [(ngModel)]="message" placeholder="Enter a message">
-<p>You typed: {{ message }}</p>
-
-<button type="button"(click)="isNext()">Next</button>
+    <!-- Two-way Binding -->
+    <input [(ngModel)]="message" placeholder="Enter a message" style="border-radius: 4px;">
+    <p>You typed: {{ message }}</p>
+    </div>
+  </div>
+</div>
+<div class="d-flex justify-content-center mt-auto">
+  <button type="button" class="btn-next" (click)="isNext()">Next</button>
+</div>

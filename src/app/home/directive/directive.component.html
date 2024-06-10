@@ -1,18 +1,25 @@
-<h3>Directive</h3>
-<p>Custom Directive</p>
-<div appHoverHighlight style="width: 200px; height: 100px; border: 1px solid black;">
-  Hover over me to see the highlight effect!
-</div>
-<!-- these are used to Ngfor and NgIf condition -->
-<p>Structural Directive</p>
-<div *ngFor="let data of data">
-<p *ngIf="data.name == 'test3'">{{data.name}}</p>
-</div>
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="text-center">
+    <h3>Directive</h3>
+    <p>Custom Directive</p>
+    <div appHoverHighlight style="width: 200px; height: 100px; border: 1px solid black; border-radius: 4px;">
+      Hover over me to see the highlight effect!
+    </div>
+    <!-- these are used to Ngfor and NgIf condition -->
+    <p>Structural Directive</p>
+    <div *ngFor="let data of data">
+      <p *ngIf="data.name == 'test3'">{{data.name}}</p>
+    </div>
 
-<p>attribute Directive</p>
+    <p>attribute Directive</p>
 
-<div *ngFor="let data of data">
-  <p [ngStyle]="{'background-color': data.name == 'test3' ? '' : 'green'}">{{data.name}}</p>
-  <p [ngClass]="{demo:  data.name == 'test2' }">{{data.name}}</p>
+    <div *ngFor="let data of data">
+      <p [ngStyle]="{'background-color': data.name == 'test3' ? '' : 'green'}">{{data.name}}</p>
+      <p [ngClass]="{demo:  data.name == 'test2' }">{{data.name}}</p>
+    </div>
   </div>
-<button type="button"(click)="isNext()">Next</button>
+</div>4
+
+<div class="d-flex justify-content-center mt-auto">
+  <button type="button" class="btn-next" (click)="isNext()">Next</button>
+</div>

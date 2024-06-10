@@ -7,13 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./pipe.component.css']
 })
 export class PipeComponent implements OnInit {
-  constructor(private router:Router) {}
-  ngOnInit(){}
+  constructor(private router: Router) { }
+  ngOnInit() { }
   currentDate: Date = new Date();
   message: string = 'Hello, Angular Pipes!';
   temperature: number = 25.6789;
 
-  isNext(){
+  isNext() {
     this.router.navigateByUrl('directive')
   }
 }

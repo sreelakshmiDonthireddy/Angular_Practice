@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./binding.component.css']
 })
 export class BindingComponent implements OnInit{
-  greeting: string = 'Hello, Angular!';
+  // greeting: string = 'Hi, DataBinding!';
   name: string = '';
   counter: number = 0;
   message: string = '';
@@ -15,6 +15,9 @@ export class BindingComponent implements OnInit{
   ngOnInit(): void {}
   increment() {
     this.counter++;
+  }
+  decrement() {
+    this.counter--;
   }
   onInputChange(event: Event) {
     const target = event.target as HTMLInputElement;

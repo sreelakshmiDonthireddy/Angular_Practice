@@ -1,5 +1,10 @@
-<h3>dependency works!</h3>
+<div class="container d-flex justify-content-center align-items-center mt-5">
+  <div class="text-center">
+    <h3>Dependency Component</h3>
+    <p>{{ message }}</p>
+  </div>
+</div>
 
-<p>{{ message }}</p>
-
-<button type="button"(click)="isNext()">Next</button>
+<div class="d-flex justify-content-center mt-auto">
+  <button type="button" class="btn-next" (click)="isNext()">Next</button>
+</div>

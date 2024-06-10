@@ -18,12 +18,13 @@ import { HttpClientComponent } from './common-data/http-client/http-client.compo
 import { HttpClientModule } from '@angular/common/http';
 import { StandaloneComponentComponent } from './common-data/standalone-component/standalone-component.component';
 import { HomeModule } from './home/home.module';
+import { SharedModule } from './shared/shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ParentComponent,
-    ChildComponent,
+    // ParentComponent,
+    // ChildComponent,
     
     //TemplateDrivenFormComponent,
     ReactiveFormExampleComponent,
@@ -34,15 +35,17 @@ import { HomeModule } from './home/home.module';
     HoverHighlightDirective,
     HttpClientComponent,
     StandaloneComponentComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    //SharedModule,
     FormsModule,
     HttpClientModule,
-    HomeModule
-
+    HomeModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
