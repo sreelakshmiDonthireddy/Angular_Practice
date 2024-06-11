@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StandaloneComponentComponent } from './common-data/standalone-component/standalone-component.component';
 import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared/shared.module';
+import { LoginComponent } from './login/login/login.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { SharedModule } from './shared/shared/shared.module';
     HoverHighlightDirective,
     HttpClientComponent,
     StandaloneComponentComponent,
+    LoginComponent,
     
   ],
   imports: [
